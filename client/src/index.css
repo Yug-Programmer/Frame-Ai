@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #111114;
+  --surface-subtle: #16161B;
+  --surface-muted: #1C1C22;
+  --border: #282832;
+  --border-strong: #3A3A46;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --text-muted: #8E8E96;
+  --text-disabled: #55555E;
+  --input-bg: #16161B;
+  --hover-bg: #22222A;
+  --active-bg: #2B2B36;
+  --status-success: #FFFFFF;
+  --status-warning: #FFFFFF;
+  --status-error: #FFFFFF;
+}
+
+.dark {
+  --background: #111114;
+  --surface-subtle: #16161B;
+  --surface-muted: #1C1C22;
+  --border: #282832;
+  --border-strong: #3A3A46;
+  --text-primary: #FFFFFF;
+  --text-secondary: #CCCCCC;
+  --text-muted: #8E8E96;
+  --text-disabled: #55555E;
+  --input-bg: #16161B;
+  --hover-bg: #22222A;
+  --active-bg: #2B2B36;
+  --status-success: #FFFFFF;
+  --status-warning: #FFFFFF;
+  --status-error: #FFFFFF;
+}
+
+*,
+*::before,
+*::after,
+html,
+body,
+input,
+textarea,
+button,
+select {
+  box-sizing: border-box;
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111114;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom pure monochrome scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111114;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D2D38;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #454554;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.35);
+  }
+}
+
+@keyframes sceneShiftIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.animate-scene-shift {
+  animation: sceneShiftIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

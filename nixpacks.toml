@@ -1,0 +1,15 @@
+[phases.setup]
+nixPkgs = ["nodejs_22", "ffmpeg"]
+
+[phases.install]
+cmds = [
+  "npm install",
+  "npm --prefix server install --include=dev",
+  "npm --prefix client install --include=dev"
+]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npm run start"

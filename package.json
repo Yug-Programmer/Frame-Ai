@@ -1,0 +1,31 @@
+{
+  "name": "qoneqt-content-engine",
+  "version": "1.0.0",
+  "description": "Production LLM-powered content pipeline for Qoneqt Global Feed (Qoneqt × CTRL FREAK)",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"gray.bold,white.bold\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix server run build && npm --prefix client run build",
+    "start": "npm --prefix server run start",
+    "postinstall": "npm --prefix server install && npm --prefix client install"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "qoneqt",
+    "ctrl-freak",
+    "video-pipeline",
+    "gpt-oss-120b",
+    "ffmpeg",
+    "ai-content"
+  ],
+  "author": "Qoneqt × CTRL FREAK Engineering Team",
+  "license": "MIT"
+}

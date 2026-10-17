@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production builds
+dist/
+build/
+**/dist/
+**/build/
+client/dist/
+
+# Environment and sensitive secrets
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Runtime temporary assets & logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+temp/
+output/
+server/temp/
+server/output/
+scratch/
+
+# Rendered media files
+*.mp4
+*.mp3
+*.wav
+*.m4a
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+.pnpm-store/
+.local/
+dist/
+build/
+.next/
+out/
+
+# Environments
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
